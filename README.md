@@ -1,6 +1,6 @@
 # Sonic infinite runner
 
-From the tutorial by (JSLegendDev)[https://jslegenddev.substack.com]
+From the tutorial by [JSLegendDev](https://jslegenddev.substack.com)
 
 ## Dev
 
