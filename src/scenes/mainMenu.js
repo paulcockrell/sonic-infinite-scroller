@@ -17,10 +17,10 @@ export default function mainMenu() {
     ]),
   ];
 
-  const bgPlatformWidth = 1280;
+  const platformWidth = 1280;
   const platforms = [
     k.add([k.sprite("platforms"), k.pos(0, 450), k.scale(4)]),
-    k.add([k.sprite("platforms"), k.pos(bgPlatformWidth * 4, 450), k.scale(4)]),
+    k.add([k.sprite("platforms"), k.pos(platformWidth * 4, 450), k.scale(4)]),
   ];
 
   k.add([
