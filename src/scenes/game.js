@@ -9,10 +9,10 @@ export default function game() {
 
   const bgPieceWidth = 1920;
   const bgPieces = [
-    k.add([k.sprite("chemical-bg"), k.pos(0, 0), k.scale(2), k.opacity(0.8)]),
+    k.add([k.sprite("chemical-bg"), k.pos(0, -50), k.scale(2), k.opacity(0.8)]),
     k.add([
       k.sprite("chemical-bg"),
-      k.pos(bgPieceWidth * 2, 0),
+      k.pos(bgPieceWidth * 2, -50),
       k.scale(2),
       k.opacity(0.8),
     ]),
@@ -140,6 +140,14 @@ export default function game() {
   k.onUpdate(() => {
     if (sonic.isGrounded()) {
       scoreMultiplier = 0;
+    }
+
+    if (sonic.isJumping()) {
+      bgPieces[0].pos.y = bgPieces[0].pos.y + sonic.pos.y / 400;
+    }
+
+    if (sonic.isFalling()) {
+      bgPieces[0].pos.y = bgPieces[0].pos.y - sonic.pos.y / 400;
     }
 
     if (bgPieces[1].pos.x < 0) {
